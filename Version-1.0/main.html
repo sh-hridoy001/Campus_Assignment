@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinterio-SH</title>
+
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!--favicon icon-->
+    <link rel="shortcut icon" href="/assets/letter-r.png" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Internal CSS -->
+    <style>
+        .font-poppins {
+            font-family: "Nunito", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+
+</head>
+
+<body class="font-poppins">
+
+    <!-- Header -->
+
+    <Header id="home" class="md:container mx-auto">
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="navbar bg-base-100 ">
+                <div class="navbar-start ">
+
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="text-[#93e13a] lg:hidden px-1 font-bold">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow ">
+                            <li><a class="nav-link" href="#home">Home</a></li>
+                            <li><a class="nav-link" href="#about">About</a></li>
+                            <li><a class="nav-link" href="#works">Works</a></li>
+                            <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                            <li><a class="nav-link" href="#articles">Blogs</a></li>
+                            <li><a class="nav-link" href="#contact">Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                    <a class="text-3xl font-bold text-[#93e13a]">Rinterio</a>
+                </div>
+
+                <!-- List-->
+                <div class="navbar-center hidden lg:flex  ">
+                    <ul class="  menu-horizontal px-1 text-gray-800 gap-5 font-bold ">
+                        <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link"
+                                href="#home">Home</a></li>
+                        <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link"
+                                href="#about">About</a></li>
+                        <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link"
+                                href="#works">Works</a></li>
+
+                        <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link"
+                                href="#portfolio">Portfolio</a></li>
+                        <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link"
+                                href="#articles">Blogs</a></li>
+                        <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link"
+                                href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!--Navbar last part-->
+                <div class="navbar-end gap-3 hidden md:flex">
+                    <button class="btn btn-ghost btn-circle hover:bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-ghost btn-circle hover:bg-white">
+                        <div class="indicator">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </div>
+                    </button>
+                    <button onclick="window.open('https://agency-landing-page-sh.netlify.app/', '_blank')"
+                        class="nav-link text-gray-800 font-bold px-4 py-2 rounded-4xl hover:bg-[#93e13a] bg-[#ABEF5F] hover:text-white transition duration-300">Book
+                        Consult <i class="fa-solid fa-arrow-right -rotate-45 text-xl"></i></button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero area-->
+        <div class="flex justify-center items-center px-4 py-12 ">
+            <div class="text-center max-w-5xl">
+                <!-- Banner Image -->
+                <div class="mb-6">
+                    <img src="/assets/banner.png" alt="Barn House Banner" class="w-4/6 mx-auto" />
+                </div>
+
+                <!-- Heading -->
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+                    A barn house of this design has a striking appearance
+                </h1>
+
+                <!-- Paragraph -->
+                <p class="text-lg text-gray-600 mb-8">
+                    The barn house captivates with its blend of rustic charm and modern sophistication, featuring
+                    weathered wood, sleek metal accents, and large windows that flood the space with natural light.
+                </p>
+
+                <!-- Button -->
+                <button onclick="window.open('https://agency-landing-page-sh.netlify.app/', '_blank')"
+                    class="nav-link text-gray-800 font-semibold px-6 py-3 rounded-full bg-[#ABEF5F] hover:bg-[#93e13a] hover:text-white transition duration-300">Book
+                    Consult <i class="fa-solid fa-arrow-right -rotate-45 text-xl"></i> </button>
+            </div>
+        </div>
+    </Header>
+
+
+    <!--Main Section-->
+    <main class="">
+
+
+        <!--About us section-->
+        <section id="about" class="bg-gray-100 my-24 relative">
+            <div class="absolute top-10 left-38 md:left-60">
+                <img src="/assets/Vector.png" alt="" class="">
+            </div>
+            <!-- Main div-->
+            <div class="flex flex-col lg:flex-row container mx-auto py-24 ">
+                <!--Text Content-->
+                <div class="space-y-8 lg:space-y-12 flex-1 mr-4 ">
+                    <div class="px-4">
+                        <button
+                            class="mb-4 font-bold bg-gray-50 px-3 py-2 rounded-xl bg-[#ABEF5F] hover:bg-[#93e13a] hover:text-white transition duration-300"><i
+                                class="fa-solid fa-arrow-right  "></i> About Us</button>
+                        <h2 class="text-3xl md:text-5xl mb-4 font-bold">We design thoughtful,<br> liveable spaces</h2>
+                        <p class="text-gray-500 md:text-xl">The barn house captivates with its blend of rustic charm and
+                            modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                    </div>
+
+                    <!--Sub Div section-->
+                    <div class="flex flex-col space-y-4 lg:space-y-12 ">
+
+                        <!--sub div 1-->
+                        <div class="bg-white flex gap-4 py-4 px-4 rounded-md ml-2">
+                            <img src="/assets/commercial.png" alt="" class="py-2">
+                            <div class="">
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-500 ">Commercial</h3>
+                                <p class="text-gray-400 w-3/4 md:w-full pt-3">The barn house captivates with its blend
+                                    of rustic charm and modern.</p>
+                            </div>
+                        </div>
+
+                        <!--sub div 2-->
+                        <div class="bg-white flex gap-4 py-4 px-4 rounded-md ml-2">
+                            <img src="/assets/residential.png" alt="" class="py-2">
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-500">Residential</h3>
+                                <p class="text-gray-400 w-3/4 md:w-full pt-3">The barn house captivates with its blend
+                                    of rustic charm and modern.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- IMage content-->
+                <div class="flex-1 lg:w-9/10 mx-auto mt-4 ">
+                    <img src="/assets/Rectangle.png" alt="" class=" ">
+                </div>
+            </div>
+
+            <!-- Counter section -->
+            <div class=" my-24 container mx-auto bg-white rounded-xl">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  ">
+
+                    <!--div 1-->
+                    <div class="mx-6 my-8 text-center space-y-2">
+                        <i class="fa-regular fa-comment text-2xl "></i>
+                        <h3 class="text-3xl md:text-4xl font-bold">235+</h3>
+                        <p class="font-semibold text-gray-500">Happy Client Review</p>
+                    </div>
+                    <!--div 2-->
+                    <div class="mx-6 my-8 text-center space-y-2">
+                        <i class="fa-regular fa-building text-2xl"></i>
+                        <h3 class="text-3xl md:text-4xl font-bold">50+</h3>
+                        <p class="font-semibold text-gray-500">Work Departments</p>
+                    </div>
+                    <!--div 3-->
+                    <div class="mx-6 my-8 text-center space-y-2">
+                        <i class="fa-solid fa-users text-2xl "></i>
+                        <h3 class="text-3xl md:text-4xl font-bold">35k+</h3>
+                        <p class="font-semibold text-gray-500">Our Happy Client</p>
+                    </div>
+                    <!--div 4-->
+                    <div class="mx-6 my-8 text-center space-y-2">
+                        <i class="fa-regular fa-user text-2xl"></i>
+                        <h3 class="text-3xl md:text-4xl font-bold">307+</h3>
+                        <p class="font-semibold text-gray-500">Staff Members</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--  Works Section  -->
+            <section id="works" class="py-24 bg-gray-100">
+                <div class="max-w-6xl mx-auto px-4">
+                    <div class="text-center mb-10">
+                        <button
+                        class="mb-4 font-bold bg-gray-50 px-3 py-2 rounded-xl bg-[#ABEF5F] hover:bg-[#93e13a] hover:text-white transition duration-300"><i
+                            class="fa-solid fa-arrow-right "></i> How we works</button>
+                        <h2 class="text-3xl md:text-4xl font-extrabold">Our Works Process</h2>
+                        <p class="text-gray-500 max-w-3xl mx-auto mt-3">
+                            The barn house captivates with its blend of rustic charm and modern sophistication,
+                            featuring
+                            weathered wood, sleek metal accents.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Card 1 -->
+                        <article
+                            class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition transform hover:-translate-y-2">
+                            <div class="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center mb-4">
+                                <!-- replace with icon img if you prefer -->
+                                <img src="/assets/concept.png" alt="Concept icon" class="w-10 h-10 object-contain">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Concept</h3>
+                            <p class="text-gray-500 text-sm mb-4">Initial concept and idea development focusing on form
+                                and
+                                function.</p>
+                            <a href="#"
+                                class="inline-flex items-center gap-2 text-sm font-semibold text-[#93e13a] hover:underline">
+                                Learn more <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                            </a>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article
+                            class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition transform hover:-translate-y-2">
+                            <div class="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-4">
+                                <img src="/assets/flow-chart.png" alt="Design process icon"
+                                    class="w-10 h-10 object-contain">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Design Process</h3>
+                            <p class="text-gray-500 text-sm mb-4">Iterative design, drawings and prototyping to create
+                                feasible solutions.</p>
+                            <a href="#"
+                                class="inline-flex items-center gap-2 text-sm font-semibold text-[#93e13a] hover:underline">
+                                Learn more <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                            </a>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article
+                            class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition transform hover:-translate-y-2">
+                            <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                                <img src="/assets/vision.png" alt="Supervision icon" class="w-10 h-10 object-contain">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Supervision</h3>
+                            <p class="text-gray-500 text-sm mb-4">Site supervision and quality checks to ensure design
+                                intent is followed.</p>
+                            <a href="#"
+                                class="inline-flex items-center gap-2 text-sm font-semibold text-[#93e13a] hover:underline">
+                                Learn more <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                            </a>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article
+                            class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition transform hover:-translate-y-2">
+                            <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                                <img src="/assets/budget-planning.png" alt="Budget planning icon"
+                                    class="w-10 h-10 object-contain">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Budget Planning</h3>
+                            <p class="text-gray-500 text-sm mb-4">Cost estimation and planning to match project scope
+                                and
+                                client budget.</p>
+                            <a href="#"
+                                class="inline-flex items-center gap-2 text-sm font-semibold text-[#93e13a] hover:underline">
+                                Learn more <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                            </a>
+                        </article>
+                    </div>
+
+                    
+                </div>
+            </section>
+
+
+        </section>
+
+        <!-- Portfolio section -->
+        <section id="portfolio" class="container mx-auto my-24">
+
+            <!--Text content area-->
+            <div class="space-y-4 text-center">
+                <button
+                    class="nav-link inline-block px-6 py-3 bg-[#93e13a] text-white rounded-full font-bold hover:bg-[#7ec21f] transition"></i>Explore Our Works</button>
+                <h2 class=" text-3xl font-bold">Our Latest Portfolio</h2>
+                    <p class="text-gray-500 font-semibold max-w-3xl mx-auto">The barn house captivates with its blend of
+                        rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+            </div>
+
+            <!-- Grid section-->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center my-24">
+
+                <!--grid 1-->
+                <div class="flex bg-white px-4 py-4 rounded-lg  shadow-sm col-span-3 ">
+                    <div class="flex-1 ">
+                        <img src="/assets/img1.png" alt="">
+                    </div>
+                    <div class="space-y-3 flex-1  ">
+                        <h3 class="text-3xl font-bold">Commercial</h3>
+                        <p class="text-gray-500 text-xl">The barn house captivates with its blend of rustic charm and
+                            modern. The barn house captivates with its blend of rustic charm and modern .</p>
+                        <button>View Details <i class="fa-solid fa-arrow-right -rotate-45 text-xl"></i></button>
+                    </div>
+                </div>
+
+                <!--grid 2-->
+                <div class="p-6 shadow-sm  bg-white rounded-xl  max-w-3xl">
+                    <img src="/assets/img2.png" alt="">
+                </div>
+
+                <!--grid 3-->
+                <div class="p-6 shadow-sm col-span-1 bg-white rounded-xl mx-auto max-w-3xl ">
+                    <img src="/assets/img3.png" alt="">
+                </div>
+
+                <!--grid 4-->
+                <div class="flex bg-white px-4 py-4 rounded-lg shadow-sm col-span-2 max-w-3xl">
+                    <div class="flex-1 ">
+                        <img src="/assets/img4.png" alt="">
+                    </div>
+                    <div class="space-y-3 flex-1  ">
+                        <h3 class="text-3xl font-bold">Commercial</h3>
+                        <p class="text-gray-500 text-xl">The barn house captivates with its blend of rustic charm and
+                            modern. </p>
+                        <button>View Details <i class="fa-solid fa-arrow-right -rotate-45 text-xl"></i></button>
+                    </div>
+                </div>
+
+                <!--grid 5-->
+                <div class="p-6 shadow-sm col-span-1 bg-white rounded-xl mx-auto max-w-3xl">
+                    <img src="/assets/img5.png" alt="">
+                </div>
+
+            </div>
+        </section>
+
+        <!--Artical section-->
+        <section id="articles" class="bg-gray-100  ">
+
+            <div class="container mx-auto py-24">
+                <!--Text content area-->
+                <div class="space-y-4 text-center space-y-7">
+                    <button
+                        class="text-gray-800 font-bold px-4 py-2 rounded-4xl hover:bg-[#93e13a] bg-[#c9ff8bd2] hover:text-white transition duration-300""><i class="
+                        fa-solid fa-arrow-right "></i>Let's Connect</button>
+                    <h2 class=" text-3xl font-bold">Read Our Articles and News</h2>
+                        <p class="text-gray-500 font-semibold max-w-3xl mx-auto">The barn house captivates with its
+                            blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal
+                            accents.</p>
+                </div>
+
+                <!--All grid -->
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-24">
+
+                    <!--grid 1-->
+                    <div class="bg-white rounded-xl space-y-4 shadow-md p-6 hover:shadow-xl">
+                        <img src="/assets/article1.png" alt="" class="w-full object-cover h-60">
+                        <h2 class="text-xl font-bold ">How to choose the furniture right of your home.</h2>
+                        <p class="text-gray-500">The barn house captivates with its blend of rustic charm and modern.
+                        </p>
+                        <button onclick="window.open('https://agency-landing-page-sh.netlify.app/', '_blank')"
+                            class="nav-link hover:text-[#a9ff47d2] font-bold">Read More <i
+                                class=" fa-solid fa-arrow-right -rotate-45 text-xl  p-1 rounded-full text-black  "></i></button>
+                    </div>
+                    <!--grid 2-->
+                    <div class="bg-white rounded-xl space-y-4 shadow-md p-6 hover:shadow-xl">
+                        <img src="/assets/article2.png" alt="" class="w-full object-cover h-60">
+                        <h2 class="text-xl font-bold ">How to choose the furniture right of your home.</h2>
+                        <p class="text-gray-500">The barn house captivates with its blend of rustic charm and modern.
+                        </p>
+                        <button onclick="window.open('https://agency-landing-page-sh.netlify.app/', '_blank')"
+                            class="nav-link hover:text-[#a9ff47d2] font-bold">Read More <i
+                                class=" fa-solid fa-arrow-right -rotate-45 text-xl  p-1 rounded-full text-black  "></i></button>
+                    </div>
+                    <!--grid 3-->
+                    <div class="bg-white rounded-xl space-y-4 shadow-md p-6 hover:shadow-xl">
+                        <img src="/assets/article3.png" alt="" class="w-full object-cover h-60">
+                        <h2 class="text-xl font-bold ">How to choose the furniture right of your home.</h2>
+                        <p class="text-gray-500">The barn house captivates with its blend of rustic charm and modern.
+                        </p>
+                        <button onclick="window.open('https://agency-landing-page-sh.netlify.app/', '_blank')"
+                            class="nav-link hover:text-[#a9ff47d2] font-bold">Read More <i
+                                class=" fa-solid fa-arrow-right -rotate-45 text-xl  p-1 rounded-full text-black "></i></button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!---- Contact Section ---->
+        <section id="contact" class="py-16 bg-gray-600">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-[#a8ffa0] mb-2">Get in Touch</h2>
+                    <p class="text-gray-200 max-w-md mx-auto">
+                        Feel free to contact me for any project, collaboration, or help.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                    <!-- Contact Info -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-white">Contact Information</h3>
+
+                        <p class="flex items-center gap-3 text-white">
+                            <i class="fa-solid fa-envelope text-[#a8ffa0] text-2xl"></i>
+                            sazzadhossainhridoy@gmail.com
+                        </p>
+
+                        <p class="flex items-center gap-3 text-white">
+                            <i class="fa-solid fa-phone text-[#a8ffa0] text-2xl"></i>
+                            +880 1873-960970
+                        </p>
+
+                        <p class="flex items-center gap-3 text-white">
+                            <i class="fa-solid fa-location-dot text-[#a8ffa0] text-2xl"></i>
+                            Chittagong, Bangladesh
+                        </p>
+
+                        <div class="flex gap-4 mt-4">
+                            <a href="#" class="text-2xl hover:text-[#a8ffa0]"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://github.com/sh-hridoy001" target="_blank"
+                                class="text-2xl hover:text-[#a8ffa0]">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="#" class="text-2xl hover:text-[#a8ffa0]"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <form class="space-y-5">
+
+                            <div>
+                                <label class="text-gray-700 font-semibold">Your Name</label>
+                                <input type="text" placeholder="Enter your name"
+                                    class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a8ffa0]">
+                            </div>
+
+                            <div>
+                                <label class="text-gray-700 font-semibold">Your Email</label>
+                                <input type="email" placeholder="Enter your email"
+                                    class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a8ffa0]">
+                            </div>
+
+                            <div>
+                                <label class="text-gray-700 font-semibold">Message</label>
+                                <textarea placeholder="Write your message"
+                                    class="w-full mt-2 p-3 border rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-[#a8ffa0]"></textarea>
+                            </div>
+
+                            <button
+                                class="nav-link hover:text-white hover:bg- w-full py-3 bg-[#abff4c] text-black font-bold rounded-lg hover:bg-[#4dd632] transition">
+                                Send Message<i
+                                    class=" fa-solid fa-arrow-right -rotate-45 text-xl p-1 rounded-full "></i>
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer id="" class="bg-gray-900 py-24">
+        <div class="space-y-10 text-center">
+            <button class="nav-link font-bold text-2xl  text-white" id="home"><i
+                    class="fa-solid fa-arrow-right text-white  rounded-full p-2  -rotate-45 "></i> Rinterio</button>
+            <p class="text-gray-200 max-w-3/4 mx-auto">The barn house captivates with its blend of rustic charm and
+                modern sophistication, featuring weathered wood, sleek metal accents.</p>
+
+            <!--nav div-->
+            <div class="  ">
+                <ul class="  menu-horizontal px-1 text-gray-300 gap-5 font-semibold ">
+
+                    <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link" href="#works">Works</a>
+                    </li>
+                    <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link"
+                            href="#portfolio">Portfolio</a></li>
+                    <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link"
+                            href="#articles">Blogs</a></li>
+                    <li class="hover:text-[#93e13a] transition duration-300"><a class="nav-link" href="#contact">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+
+            <button
+                class="nav-link text-gray-800 font-semibold px-6 py-3 rounded-full bg-[#93e13a] hover:bg-[#93e13a] hover:text-white transition duration-300">Book
+                Consult <i
+                    class="fa-solid fa-arrow-right -rotate-45 text-xl  p-1 text-black hover:text-white rounded-full"></i>
+            </button>
+            <p></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
